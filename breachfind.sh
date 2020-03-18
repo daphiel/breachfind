@@ -24,11 +24,11 @@ case "$1" in
 			cat /tmp/"$CHECKS"_results.txt | wc -l 
 		done
 		mv /tmp/*_results.txt .
-	    ;;
-	     -c|compressed)
-		find . | grep -E '.*\.(rar|.zip|.7z|.gz|.tar|.tgz)'
-		;;
-		*)
+	;;
+	-c|compressed)
+	find . | grep -E '.*\.(rar|.zip|.7z|.gz|.tar|.tgz)'
+	;;
+	*)
             echo "$0 loaded!"
             echo
             echo "Usage: $0 {-p|-w|-c}"
